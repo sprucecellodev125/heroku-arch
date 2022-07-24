@@ -4,11 +4,11 @@
     "description": "Deploy a Arch Linux heroku dyno",
     "keywords": [
         "Arch Linux",
-        "Docker",
+        "Docker"
     ],
     "env": {},
     "website": "",
     "repository": "https://github.com/ItzCuteAkemi/heroku-arch",
-    "logo": "https://cdn.discordapp.com/avatars/899869470145802260/7aca66de472d0edd1c454d0a1365ee1f.png?size=1024",
+    "logo": "https://cdn.discordapp.com/avatars/899869470145802260/7aca66de472d0edd1c454d0a1365ee1f.png",
     "stack": "container"
 }
