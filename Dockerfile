@@ -4,10 +4,8 @@ RUN pacman-key --init
 
 RUN pacman -Syyu --noconfirm
 
-RUN pacman -S tmate --noconfirm
+RUN pacman -S tmate neofetch base-devel --noconfirm --needed
 
-RUN chmod -R 777 /opt/bin/ /etc/passwd \
-    && chgrp -R 0 /opt/bin/ \
-    && chmod -R g=u /opt/bin/
+RUN chmod -R 777 /etc/passwd 
 
-CMD ["tmate -F"]
+CMD ["tmate", "-F"]
