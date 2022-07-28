@@ -3,14 +3,16 @@ FROM archlinux
 USER root
 
 ENV HOME=/root \
-    PORT=8080
+    DYNO=ssh \
 
 RUN pacman-key --init
 
 RUN pacman -Syyu --noconfirm
 
-RUN pacman -S tmate neofetch base-devel htop xfce4 xfce4-goodies x11vnc htop sudo git fakeroot --noconfirm --needed
+RUN pacman -S tmate neofetch base-devel htop sudo git fakeroot wget curl --noconfirm --needed
 
 RUN chmod -R 777 /etc/passwd 
 
-CMD ["tmate", "-F"]
+RUN curl -o /start.sh https://raw.githubusercontent.com/ItzCuteAkemi/heroku-arch/main/Dockerfile 
+
+CMD ["bash", "/start.sh"]
