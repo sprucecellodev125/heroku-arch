@@ -1,4 +1,5 @@
 #!/bin/bash
 export DYNO=ssh
-export PORT=8080
+export PORT=3000
+node /pingme.js &
 tmate -F
