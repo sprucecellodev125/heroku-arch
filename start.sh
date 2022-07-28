@@ -1,4 +1,3 @@
 #!/bin/bash
-export PORT=8080
-node /pingme.js &
+node /pingme.js ${PORT} &
 tmate -F
