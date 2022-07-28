@@ -3,7 +3,7 @@ FROM archlinux
 USER root
 
 ENV HOME=/root \
-    DYNO=web PORT=8080 
+    PORT=8080 
 
 RUN pacman-key --init
 
