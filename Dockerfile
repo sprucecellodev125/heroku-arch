@@ -9,7 +9,8 @@ RUN pacman-key --init
 
 RUN pacman -Syyu --noconfirm
 
-RUN pacman -S tmate neofetch base-devel htop sudo git fakeroot wget curl nodejs npm --noconfirm --needed
+RUN pacman -S tmate neofetch base-devel htop sudo git fakeroot wget curl nodejs npm pkgfile vim nano --noconfirm --needed \
+    && pkgfile --update
 
 RUN chmod -R 777 /etc/passwd 
 
